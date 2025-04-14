@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2 mt-5">
+            <input class="form-control form-control-lg"  type="text" [(ngModel)]="nombreTarea" (keyup.enter)="guardarTarea()" placeholder="Ingrese tarea">
+        </div>
+        <div class="col-lg-6 offset-lg-3 mt-3">
+            <div class="card" *ngIf="listaTarea.length === 0">
+                <h6 class="p-2 text-center">No tienes tareas</h6>
+            </div>
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between" *ngFor="let t of listaTarea; let i = index">
+                <span (click)="actualizarTarea(t, i)">
+                    <i [class.text-success]="t.tarea"[ngClass]="t.tarea ? 'fa-solid fa-face-grin-hearts' : 'fa-solid fa-heart-crack'"></i>
+
+                </span>
+                {{t.nombre}}
+                <span class="text-danger" (click)="eliminarTarea(i)"><i class="fa-solid fa-trash"></i></span>
+              </li>
+            </ul>
+        </div>
+    </div>
+</div>

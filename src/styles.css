@@ -1,1 +1,198 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Basic body styling with improved background handling */
+body {
+    /* Ensure the background image covers the entire viewport */
+    background-image: url("/fondo.jpg");
+    background-size: cover; /* Scale the image to cover the entire background */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Keep the background fixed while scrolling */
+    font-family: sans-serif; /* A more readable default font */
+    color: #333; /* A darker default text color */
+    margin: 0; /* Remove default body margins */
+    padding-bottom: 50px; /* Add some padding at the bottom for content visibility */
+  }
+  
+  /* Optional: Add a subtle overlay for better text readability on the background */
+  .overlay {
+    position: fixed; /* Cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    z-index: -1; /* Place it behind the content */
+  }
+  
+  /* --- Using Bootstrap Classes --- */
+  
+  /* Example: Styling a container for your content */
+  .container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white container */
+    padding: 20px;
+    margin: 20px auto; /* Center the container horizontally */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 960px; /* Limit the maximum width of the container */
+  }
+  
+  /* Example: Styling headings */
+  h1, h2, h3 {
+    color:rgb(182, 247, 247); /* Bootstrap primary color */
+    margin-bottom: 15px;
+  }
+  
+  /* Example: Styling paragraphs */
+  p {
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 10px;
+  }
+  
+  /* Example: Styling buttons */
+  .btn-primary {
+    /* Already styled by Bootstrap */
+  }
+  
+  .btn-secondary {
+    /* Already styled by Bootstrap */
+  }
+  
+  /* Example: Using Bootstrap grid system */
+  .row {
+    /* Bootstrap row class for creating responsive layouts */
+  }
+  
+  .col-md-6 {
+    /* Bootstrap column class for medium-sized screens and up */
+  }
+  
+  /* Example: Styling navigation */
+  .navbar {
+    background-color: #f8f9fa; /* Light background */
+    padding: 15px 0;
+    margin-bottom: 20px;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+    color:rgb(143, 239, 252);
+  }
+  
+  .nav-link {
+    color: #333;
+    margin-left: 15px;
+  }
+  
+  .nav-link:hover {
+    color: #007bff;
+  }
+  
+  /* --- Custom CSS on top of Bootstrap --- */
+  
+  /* You can add your own specific styles here to override or extend Bootstrap */
+  .my-custom-element {
+    /* Your custom styles */
+    border: 1px solid green;
+    padding: 10px;
+  }
+  
+  /* --- Responsive Design with Bootstrap --- */
+  
+  /* Bootstrap's grid system and utility classes (like d-flex, align-items-center, justify-content-between) are excellent for responsive design. */
+  
+  /* Example: Making text responsive */
+  .responsive-text {
+    font-size: 1.2rem; /* Base font size */
+  }
+  
+  @media (min-width: 768px) {
+    .responsive-text {
+      font-size: 1.5rem; /* Larger font size on medium screens and up */
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .responsive-text {
+      font-size: 1.8rem; /* Even larger font size on large screens */
+    }
+  }
+  
+  /* --- Styling the Background Image Directly (Body) --- */
+  
+  /* You've already applied basic styles to the body's background image.
+     Here are some more advanced options you can consider: */
+  
+  /* Adjusting Background Position */
+  body {
+    /* ... other body styles ... */
+    background-position: center; /* Center the image */
+    /* background-position: top center; */
+    /* background-position: bottom right; */
+  }
+  
+  /* Adding a Subtle Gradient Overlay (using CSS, not an image) */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)); /* Example dark gradient */
+    z-index: -2; /* Place it behind the overlay and the body background */
+  }
+  
+  /* Using a different background blend mode (can create interesting effects) */
+  body {
+    /* ... other body styles ... */
+    /* background-blend-mode: multiply; */
+    /* background-blend-mode: screen; */
+    /* background-blend-mode: overlay; */
+    /* color: white; /* Often useful when using blend modes */
+  }
+  
+  /* --- Styling Images within your Content (not the body background) --- */
+  
+  /* If you have <img> tags in your HTML and want to style them */
+  
+  .content-image {
+    max-width: 100%; /* Make images responsive within their container */
+    height: auto;
+    border-radius: 8px; /* Rounded corners for content images */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Subtle shadow for content images */
+    margin-bottom: 15px;
+  }
+  
+  .circular-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensure the image covers the circle without distortion */
+  }
+  
+  .grayscale-image {
+    filter: grayscale(100%); /* Convert to grayscale */
+  }
+  
+  .sepia-image {
+    filter: sepia(100%); /* Apply a sepia tone */
+  }
+  
+  .blur-image {
+    filter: blur(5px); /* Apply a blur effect */
+  }
+  
+  /* --- Responsive Images with Bootstrap --- */
+  
+  /* Use Bootstrap's `.img-fluid` class to make images responsive within their parent container */
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* You can also use Bootstrap's grid system to control image sizes at different breakpoints */
+  /* <div class="row">
+    <div class="col-md-6">
+      <img src="your-image.jpg" class="img-fluid" alt="Responsive Image">
+    </div>
+  </div> */
